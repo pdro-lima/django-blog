@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+  <article>
+    <h1>{{ post.title }}</h1>
+    <p><em>{{ post.subtitle }}</em></p>
+    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    <div>
+      {{ post.content|safe }}
+    </div>
+    <p>Publicado em: {{ post.published_date }}</p>
+  </article>
+  <a href="{% url 'post_list' %}">Voltar para as Páginas</a>
+{% endblock %}
