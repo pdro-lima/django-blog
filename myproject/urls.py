@@ -27,6 +27,7 @@ urlpatterns = [
     path('sobre/', TemplateView.as_view(template_name='sobre.html'), name='sobre'),
     path('pages/', include('blog.urls')),
     path('contas/', include('contas.urls')),
+    path('messages/', include('app_mensagens.urls')),
 ]
 
 if settings.DEBUG:
